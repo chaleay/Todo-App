@@ -1,0 +1,39 @@
+[
+  {
+    "id": 0,
+    "title": "Help Mom wash the dishes",
+    "assignee": "Elijah",
+    "status": "pending",
+    "createdAt": "2024-04-15T22:31:10.106Z",
+    "dueDate": "2024-04-30T22:31:10.106Z",
+    "priority": 0,
+    "type": "personal",
+    "details": "Mom needs alot of help",
+    "tags": ["Mom"],
+    "completed": false
+  },
+  {
+    "id": 1,
+    "title": "Go out to Dinner",
+    "assignee": "Elijah",
+    "status": "pending",
+    "createdAt": "2024-04-13T22:31:10.106Z",
+    "dueDate": "2024-04-20T20:30:00.106Z",
+    "priority": 1,
+    "type": "personal",
+    "details": "I'm freaking starving",
+    "tags": ["Hungry"]
+  },
+  {
+    "id": 2,
+    "title": "Do Coding Test",
+    "assignee": "Elijah",
+    "status": "pending",
+    "createdAt": "2024-04-15T22:31:10.106Z",
+    "dueDate": "2024-04-180T22:31:10.106Z",
+    "priority": 2,
+    "type": "work",
+    "details": "Work hard.",
+    "tags": ["Coding", "React"]
+  }
+]
