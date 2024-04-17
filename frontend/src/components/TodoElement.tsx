@@ -13,6 +13,7 @@ import { Box, Typography } from "@mui/material";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CircleIcon from "@mui/icons-material/Circle";
 import DeleteIcon from "@mui/icons-material/Delete";
+import dayjs from "dayjs";
 
 interface TodoProps {
   todo: Todo;
@@ -96,7 +97,18 @@ export default function TodoElement({
           <Box sx={{ display: "flex", width: "12%" }}>
             <CalendarMonthIcon sx={{ mr: "3%" }} />
             <Typography sx={{ fontSize: ".9rem" }}>
-              Due on {`${todo.dueDate.month() + 1}/${todo.dueDate.date()}`}
+              {dayjs().isAfter(todo.dueDate) ? (
+                <>
+                  <em>
+                    Was Due on {todo.dueDate.month() + 1}
+                    {todo.dueDate.date()}
+                  </em>
+                </>
+              ) : (
+                <>
+                  Due on {`${todo.dueDate.month() + 1}/${todo.dueDate.date()}`}
+                </>
+              )}
             </Typography>
           </Box>
           <Box sx={{ display: "flex", flexWrap: "wrap", width: "20%" }}>
