@@ -4,8 +4,8 @@ import TodoListContainer from "./components/TodoListContainer";
 import Todo from "./models/Todo";
 import { useState } from "react";
 import AddTodo from "./components/AddTodo";
-import dayjs, { Dayjs } from "dayjs";
 import { Sorting } from "./models/enums";
+import dayjs from "dayjs";
 
 // needed components
 // side navbar left
@@ -84,6 +84,11 @@ export default function App() {
     console.log("deleting");
     setTodos((todos) => todos.filter((todo) => todo.id !== id));
   }
+
+  // function handleModifyTodo(todo: Todo) {
+  //   console.log(todo);
+  //   setTodos((todos) => todos.map((t) => (todo.id === t.id ? { ...t } : todo)));
+  // }
 
   function handleToggleTodo(id: string) {
     setTodos((todos) =>

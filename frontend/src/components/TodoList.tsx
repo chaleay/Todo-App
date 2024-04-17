@@ -2,11 +2,10 @@ import AddIcon from "@mui/icons-material/Add";
 import Todo from "../models/Todo";
 import List from "@mui/material/List";
 import TodoElement from "./TodoElement";
-import { useState } from "react";
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
 import { Sorting } from "../models/enums";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 
 interface TodoListProps {
   textColor: string;

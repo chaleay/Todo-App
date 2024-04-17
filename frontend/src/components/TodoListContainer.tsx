@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import TodoList from "./TodoList";
 import Todo from "../models/Todo";
-import { useState } from "react";
 import { Sorting } from "../models/enums";
 
 interface TodoListProps {

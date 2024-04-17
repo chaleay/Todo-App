@@ -1,8 +1,6 @@
-import * as React from "react";
 import TextField from "@mui/material/TextField";
 import { InputAdornment } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { white } from "material-ui/styles/colors";
 import { useState } from "react";
 
 interface TextFieldSearchProps {
@@ -31,7 +29,7 @@ export default function TextFieldSearch({
     onSetTags(val.length > 1 ? val : "");
   }
 
-  const handleKeyUp = (e) => {
+  const handleKeyUp = (e: { keyCode: number }) => {
     if (e.keyCode == 13) {
       onSetTags(curValue);
     }

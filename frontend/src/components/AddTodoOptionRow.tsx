@@ -1,12 +1,6 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Todo from "../models/Todo";
-import { Height } from "@mui/icons-material";
 import Box from "@mui/material/Box";
-import CloseIcon from "@mui/icons-material/Close";
-import IconButton from "@mui/material/IconButton";
-import Person2Icon from "@mui/icons-material/Person2";
+
 import { Typography } from "@mui/material";
 
 interface AddTodoOptionRowProps {

@@ -1,4 +1,3 @@
-import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
@@ -16,7 +15,6 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import { Box, Typography } from "@mui/material";
 import TextFieldSearch from "./TextFieldSearch";
 import ProfileInfoButton from "./ProfileInfoButton";
-import { Directions } from "@mui/icons-material";
 import { useState } from "react";
 import DrawerFilterTab from "./DrawerFilterTab";
 
@@ -28,7 +26,6 @@ interface LeftPermanentDrawerProps {
   dividerColor: string;
   onSetFilter: (type: string) => void;
   onSetTags: (tag: string) => void;
-  tags: string[];
 }
 
 export default function LeftPermanentDrawer({

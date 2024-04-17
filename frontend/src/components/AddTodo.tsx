@@ -1,4 +1,3 @@
-import * as React from "react";
 import dayjs, { Dayjs } from "dayjs";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -52,7 +51,7 @@ export default function AddTodo({
   // for tag input
   const [curTagValue, setCurTagValue] = useState("");
 
-  const handleKeyUp = (e) => {
+  const handleKeyUp = (e: { keyCode: number }) => {
     if (e.keyCode == 13 && curTagValue.length > 1) {
       console.log(curTagValue);
       setTags(() => [...tags, curTagValue.toLowerCase()]);
@@ -148,6 +147,7 @@ export default function AddTodo({
       </AddTodoOptionRow>
       <AddTodoOptionRow fontSize={fontSize} rowName="Task Priority">
         <FormControl
+          //@ts-ignore
           sx={{
             width: "100%",
             backgroundColor:
