@@ -79,9 +79,11 @@ export default function App() {
   function handleAddTodoPanel(): void {
     setAddTodoPanel(() => !addTodoPanel);
   }
-  // function handleDeleteTodo(id: number): void {
-  //   setTodos((todos) => todos.filter((todo) => todo.id !== id));
-  // }
+
+  function handleDeleteTodo(id: string): void {
+    console.log("deleting");
+    setTodos((todos) => todos.filter((todo) => todo.id !== id));
+  }
 
   function handleToggleTodo(id: string) {
     setTodos((todos) =>
@@ -135,6 +137,7 @@ export default function App() {
               Upcoming
             </Typography>
             <TodoListContainer
+              onDeleteTodo={handleDeleteTodo}
               onToggleTodo={handleToggleTodo}
               onAddTodoPanel={handleAddTodoPanel}
               onChangeSort={setSort}

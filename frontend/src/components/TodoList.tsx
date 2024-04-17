@@ -15,6 +15,7 @@ interface TodoListProps {
   sort: Sorting;
   onToggleTodo: (id: string) => void;
   onAddTodoPanel: () => void;
+  onDeleteTodo: (id: string) => void;
   filter: string;
   tags: string;
 }
@@ -25,6 +26,7 @@ export default function TodoList({
   borderColor = "black",
   onToggleTodo,
   onAddTodoPanel,
+  onDeleteTodo,
   sort,
   filter,
   tags = "",
@@ -81,6 +83,7 @@ export default function TodoList({
                 return (
                   <TodoElement
                     todo={todo}
+                    onDeleteTodo={onDeleteTodo}
                     onToggleTodo={onToggleTodo}
                     checked={todo.completed}
                     textColor="white"
@@ -96,6 +99,7 @@ export default function TodoList({
                   <TodoElement
                     todo={todo}
                     onToggleTodo={onToggleTodo}
+                    onDeleteTodo={onDeleteTodo}
                     checked={todo.completed}
                     textColor="white"
                   />
@@ -113,6 +117,7 @@ export default function TodoList({
                 return (
                   <TodoElement
                     todo={todo}
+                    onDeleteTodo={onDeleteTodo}
                     onToggleTodo={onToggleTodo}
                     checked={todo.completed}
                     textColor="white"
@@ -130,6 +135,7 @@ export default function TodoList({
               .map((todo) => {
                 return (
                   <TodoElement
+                    onDeleteTodo={onDeleteTodo}
                     todo={todo}
                     onToggleTodo={onToggleTodo}
                     checked={todo.completed}

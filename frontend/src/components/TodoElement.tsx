@@ -12,18 +12,21 @@ import Todo from "../models/Todo";
 import { Box, Typography } from "@mui/material";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CircleIcon from "@mui/icons-material/Circle";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 interface TodoProps {
   todo: Todo;
   textColor: string;
   onToggleTodo: (id: string) => void;
   checked: boolean;
+  onDeleteTodo: (id: string) => void;
 }
 
 export default function TodoElement({
   todo,
   textColor = "white",
   onToggleTodo,
+  onDeleteTodo,
   checked,
 }: TodoProps) {
   const labelId = `checkbox-list-label-${todo.id}`;
@@ -33,9 +36,18 @@ export default function TodoElement({
       <ListItem
         key={todo.id}
         secondaryAction={
-          <IconButton edge="end" aria-label="MoreDetails">
-            <ArrowForwardIosIcon sx={{ color: textColor }} />
-          </IconButton>
+          <>
+            <IconButton
+              onClick={() => onDeleteTodo(todo.id)}
+              edge="end"
+              aria-label="MoreDetails"
+            >
+              <DeleteIcon sx={{ color: textColor }} />
+            </IconButton>
+            <IconButton edge="end" aria-label="MoreDetails">
+              <ArrowForwardIosIcon sx={{ color: textColor }} />
+            </IconButton>
+          </>
         }
         disablePadding
       >
@@ -95,7 +107,7 @@ export default function TodoElement({
               return (
                 <Typography
                   sx={{
-                    backgroundColor: "red",
+                    backgroundColor: "#e41d23",
                     borderRadius: "60px",
                     px: "2px",
                     fontSize: ".8rem",

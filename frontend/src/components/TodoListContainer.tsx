@@ -18,6 +18,7 @@ interface TodoListProps {
   onToggleTodo: (id: string) => void;
   onAddTodoPanel: () => void;
   onChangeSort: (type: Sorting) => void;
+  onDeleteTodo: (id: string) => void;
   sort: Sorting;
   filter: string;
   tags: string;
@@ -28,6 +29,7 @@ export default function TodoListContainer({
   borderColor = "black",
   todos,
   onToggleTodo,
+  onDeleteTodo,
   onAddTodoPanel,
   sort,
   onChangeSort,
@@ -81,6 +83,7 @@ export default function TodoListContainer({
           filter={filter}
           sort={sort}
           borderColor={borderColor}
+          onDeleteTodo={onDeleteTodo}
           onAddTodoPanel={onAddTodoPanel}
           onToggleTodo={onToggleTodo}
           todos={todos}
