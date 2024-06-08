@@ -68,6 +68,7 @@ const mockTodos: Todo[] = [
 export default function App() {
   const [todos, setTodos] = useState<Todo[]>(mockTodos);
   const [addTodoPanel, setAddTodoPanel] = useState(false);
+  // const [modifyTodoPanel, setModifyTodoPanel] = useState(false);
   const [sort, setSort] = useState(Sorting.completion);
   const [filter, setFilter] = useState("");
   const [tags, setTags] = useState("");
@@ -79,6 +80,10 @@ export default function App() {
   function handleAddTodoPanel(): void {
     setAddTodoPanel(() => !addTodoPanel);
   }
+
+  // function handleModifyPanel(): void {
+  //   setModifyTodoPanel(() => !modifyTodoPanel);
+  // }
 
   function handleDeleteTodo(id: string): void {
     console.log("deleting");
